@@ -1,35 +1,39 @@
 :root {
-    --main-color: #2934B5;
-    --second-color: #fff;
+  --main-color: #2934b5;
+  --second-color: #fff;
 }
 
 body {
   margin: 12px;
   font-size: 100%;
-  font-family: 'Open Sans', sans-serif;
+  font-family: "Open Sans", sans-serif;
   color: white;
   height: 100%;
-  background: linear-gradient(to bottom, rgb(43,50,178) 0%, rgb(20,136,204) 100%);
+  background: linear-gradient(
+    to bottom,
+    rgb(43, 50, 178) 0%,
+    rgb(20, 136, 204) 100%
+  );
   background-repeat: no-repeat;
   background-attachment: fixed;
 }
 
 ul {
-    list-style: none;
+  list-style: none;
 }
 
 /*SEARCH BUTTON*/
 
-*{
+* {
   box-sizing: border-box;
 }
 
-.search-box{
+.search-box {
   width: fit-content;
   height: fit-content;
   position: relative;
 }
-.input-search{
+.input-search {
   height: 50px;
   width: 50px;
   border-style: none;
@@ -38,18 +42,18 @@ ul {
   letter-spacing: 2px;
   outline: none;
   border-radius: 25px;
-  transition: all .5s ease-in-out;
-  background-color: rgb(20,136,204);
+  transition: all 0.5s ease-in-out;
+  background-color: rgb(20, 136, 204);
   padding-right: 40px;
-  color:#fff;
+  color: #fff;
 }
-.input-search::placeholder{
-  color:rgba(255,255,255,.5);
+.input-search::placeholder {
+  color: rgba(255, 255, 255, 0.5);
   font-size: 18px;
   letter-spacing: 2px;
   font-weight: 100;
 }
-.btn-search{
+.btn-search {
   width: 50px;
   height: 50px;
   border-style: none;
@@ -60,29 +64,28 @@ ul {
   border-radius: 50%;
   position: absolute;
   right: 0px;
-  color:#ffffff ;
-  background-color:transparent;
-  pointer-events: painted;  
+  color: #ffffff;
+  background-color: transparent;
+  pointer-events: painted;
 }
-.btn-search:focus ~ .input-search{
+.btn-search:focus ~ .input-search {
+  width: 220px;
+  border-radius: 0px;
+  background-color: transparent;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+  transition: all 500ms cubic-bezier(0, 0.11, 0.35, 2);
+}
+.input-search:focus {
   width: 300px;
   border-radius: 0px;
   background-color: transparent;
-  border-bottom:1px solid rgba(255,255,255,.5);
-  transition: all 500ms cubic-bezier(0, 0.110, 0.35, 2);
-}
-.input-search:focus{
-  width: 300px;
-  border-radius: 0px;
-  background-color: transparent;
-  border-bottom:1px solid rgba(255,255,255,.5);
-  transition: all 500ms cubic-bezier(0, 0.110, 0.35, 2);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+  transition: all 500ms cubic-bezier(0, 0.11, 0.35, 2);
 }
 
 /* DESKTOP */
 
 @media (min-width: 769px) {
-    
   .container {
     width: 880px;
     margin: 8px auto;
@@ -94,51 +97,53 @@ ul {
   }
 
   /* LOCATION AND DATE*/
-  
 
   .top-container h1 {
-      font-size: 48px;
-      font-weight: 500;
+    font-size: 48px;
+    font-weight: 500;
   }
 
   .top-container h3 {
-      margin-top: -25px;
-      font-size: 22px;
-      font-weight: lighter;
+    margin-top: -25px;
+    font-size: 22px;
+    font-weight: lighter;
+    letter-spacing: 2px;
   }
 
   /*SEARCH BAR*/
   .search-engine {
-      margin-left: 50%;
-      margin-top: 5%;
+    margin-left: 31%;
+    margin-top: 5%;
   }
 
   .middle-container {
     display: flex;
     flex-direction: row;
   }
-  
+
   /*ICON*/
   .left-container {
     width: 50%;
   }
-  img{
-      width: 50%;
+  img {
+    width: 50%;
   }
 
   /*TEMPERATURE*/
   .main-temp {
     margin-left: 50%;
     margin-top: -40%;
+    letter-spacing: 2px;
   }
 
   /*LINE*/
   hr.vertical {
-  width: 1px;
-  height: 220px;
-}
+    width: 1px;
+    height: 220px;
+    margin: 0 5%;
+  }
 
-/*DETAILS*/
+  /*DETAILS*/
 
   .right-container ul {
     flex-wrap: wrap;
@@ -152,20 +157,33 @@ ul {
   }
 
   h3 {
-      font-size: 22px;
-      font-weight: 400;
+    font-size: 22px;
+    font-weight: 400;
+    letter-spacing: 1px;
   }
 
-  h4{
-      margin-top: -15px;
-      font-weight: 200;
+  h4 {
+    margin-top: -15px;
+    font-weight: 200;
+    letter-spacing: 2px;
   }
-
 
   /*FORECAST*/
-  .bottom-container ul{
+  .bottom-container {
+    margin-top: 5%;
+  }
+
+  .bottom-container ul {
     display: flex;
-   flex-direction: row;
-   justify-content: space-evenly;
+    flex-direction: row;
+    justify-content: space-evenly;
+    padding-left: 0;
+  }
+
+  .bottom-container li {
+    border: 2px solid #fff;
+    border-radius: 8px;
+    text-align: center;
+    padding: 15px 30px;
   }
 }
