@@ -202,11 +202,15 @@ hr.vertical {
   .forecast {
     display: none;
   }
+
+  .horizontal {
+    display: none;
+  }
 }
 
 /* TABLET */
 
-@media (max-width: 768px) {
+@media (min-width: 481px) {
   body {
     margin: 20px;
   }
@@ -312,5 +316,148 @@ hr.vertical {
     text-align: center;
     padding: 15px 30px;
     font-weight: 800;
+  }
+
+  .horizontal {
+    display: none;
+  }
+}
+
+/* MOBILE */
+
+@media (max-width: 480px) {
+  body {
+    margin: 40px;
+  }
+
+  .container {
+    width: 280px;
+    margin: 8px auto;
+  }
+  .top-container {
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column-reverse;
+  }
+
+  /*SEARCH BAR*/
+  .search-engine {
+    margin-left: 1%;
+    margin-bottom: -10%;
+  }
+
+  .btn-search:focus ~ .input-search {
+    width: 220px;
+    border-radius: 0px;
+    background-color: transparent;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+    transition: all 500ms cubic-bezier(0, 0.11, 0.35, 2);
+  }
+  .input-search:focus {
+    width: 260px;
+    border-radius: 0px;
+    background-color: transparent;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+    transition: all 500ms cubic-bezier(0, 0.11, 0.35, 2);
+  }
+
+  /*ICON*/
+  .left-container {
+    width: 50%;
+  }
+  img {
+    width: 45%;
+  }
+
+  .middle-container {
+    display: flex;
+    flex-direction: column;
+  }
+  /*TEMPERATURE*/
+  .left-container {
+    width: 100%;
+  }
+
+  .main-temp {
+    margin-left: 150px;
+    margin-top: -47%;
+    letter-spacing: 2px;
+  }
+
+  .main-temp h1 {
+    font-size: 42px;
+    font-weight: 500;
+  }
+
+  .main-temp h3 {
+    margin-top: -16px;
+    letter-spacing: 2px;
+    font-size: 16px;
+  }
+
+  .vertical {
+    display: none;
+  }
+
+  /*DETAILS*/
+  .right-container {
+    text-align: center;
+  }
+
+  .right-container ul {
+    flex-wrap: wrap;
+    display: flex;
+    padding-left: 0;
+  }
+
+  .right-container ul li {
+    flex: 1 0 33.33%;
+    align-self: flex-end;
+  }
+
+  h3 {
+    font-size: 22px;
+    font-weight: 400;
+    letter-spacing: 1px;
+  }
+
+  h4 {
+    margin-top: -15px;
+    font-weight: 200;
+    letter-spacing: 2px;
+  }
+
+  /*HOUR-FORECAST*/
+  .bottom-container {
+    margin-top: 5%;
+    text-align: center;
+  }
+
+  .bottom-container h3 {
+    font-size: medium;
+  }
+
+  .bottom-container ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-left: 0;
+  }
+
+  .bottom-container li {
+    border-radius: 5px;
+    background-color: rgba(0, 0, 0, 0.15);
+    text-align: center;
+    padding: 2px 6px;
+    font-weight: 800;
+  }
+
+  .horizontal {
+    width: 90%;
+  }
+
+  /*FORECAST*/
+  .forecast {
+    display: none;
   }
 }
