@@ -181,25 +181,29 @@ hr.vertical {
   /*HOUR-FORECAST*/
   .bottom-container {
     margin-top: 5%;
-  }
-
-  .bottom-container ul {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
-    padding-left: 0;
+    justify-content: space-evenly;
   }
 
-  .bottom-container li {
+  .card-day {
     border-radius: 5px;
     background-color: rgba(0, 0, 0, 0.15);
     text-align: center;
-    padding: 15px 30px;
-    font-weight: 800;
+    font-size: medium;
+  }
+
+  .card-day h4 {
+    margin: 5px auto 0 auto;
+    padding-top: 15px;
+  }
+
+  .forecast-temp {
+    padding-bottom: 15px;
   }
 
   /*FORECAST*/
-  .forecast {
+  .week {
     display: none;
   }
 
@@ -282,31 +286,13 @@ hr.vertical {
   }
 
   /*HOUR-FORECAST*/
-  .bottom-container {
-    margin-top: 5%;
-  }
-
-  .bottom-container ul {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    padding-left: 0;
-  }
-
-  .bottom-container li {
-    border-radius: 5px;
-    background-color: rgba(0, 0, 0, 0.15);
-    text-align: center;
-    padding: 15px 30px;
-    font-weight: 800;
-  }
 
   /*FORECAST*/
-  .forecast {
+  .week {
     margin-top: 5%;
   }
 
-  .forecast ul {
+  .week ul {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -428,36 +414,13 @@ hr.vertical {
   }
 
   /*HOUR-FORECAST*/
-  .bottom-container {
-    margin-top: 5%;
-    text-align: center;
-  }
-
-  .bottom-container h3 {
-    font-size: medium;
-  }
-
-  .bottom-container ul {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    padding-left: 0;
-  }
-
-  .bottom-container li {
-    border-radius: 5px;
-    background-color: rgba(0, 0, 0, 0.15);
-    text-align: center;
-    padding: 2px 6px;
-    font-weight: 800;
-  }
 
   .horizontal {
     width: 90%;
   }
 
   /*FORECAST*/
-  .forecast {
+  .week {
     display: none;
   }
 }
