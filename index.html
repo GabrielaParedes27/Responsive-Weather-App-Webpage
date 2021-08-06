@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <script src="https://kit.fontawesome.com/e68f634236.js" crossorigin="anonymous"></script>
     <title>Responsive Weather App Webpage</title>
 </head>
@@ -15,8 +15,8 @@
     <div class="container">
         <div class="top-container">
             <div class="location-date">
-                <h1>London, Uk</h1>
-                <h3>Monday 29 August</h3>
+                <h1 id="city"></h1>
+                <h3 id="date"></h3>
             </div>
             <div class="search-engine">
                 <div class="search-box">
@@ -28,11 +28,11 @@
         <div class="middle-container">
             <div class="left-container">
                 <div class="image">
-                    <img src="https://ssl.gstatic.com/onebox/weather/64/partly_cloudy.png" alt="..">
+                    <img src=".." alt=".." id="main-icon">
                 </div>
                 <div class="main-temp">
-                    <h1>21°</h1>
-                    <h3>Mostly sunny</h3>
+                    <h1 id="main-temp"></h1>
+                    <h3 id="description"></h3>
                 </div>
             </div>
 
@@ -41,27 +41,27 @@
             <div class="right-container">
                 <ul>
                     <li>
-                        <h3>23°</h3>
+                        <h3 id="high-temp"></h3>
                         <h4>High</h4>
                     </li>
                     <li>
-                        <h3>7mph</h3>
+                        <h3 id="wind"></h3>
                         <h4>Wind</h4>
                     </li>
                     <li>
-                        <h3>05:27</h3>
+                        <h3 id="sunrise"></h3>
                         <h4>Sunrise</h4>
                     </li>
                     <li>
-                        <h3>14°</h3>
+                        <h3 id="low-temp"></h3>
                         <h4>Low</h4>
                     </li>
                     <li>
-                        <h3>0%</h3>
+                        <h3 id="rain"></h3>
                         <h4>Rain</h4>
                     </li>
                     <li>
-                        <h3>20:57</h3>
+                        <h3 id="sunset"></h3>
                         <h4>Sunset</h4>
                     </li>
                 </ul>
@@ -181,7 +181,7 @@
         </div>
 
     </div>
-    <script src="src/app.js"></script>
+<script src="app.js"></script>
 </body>
 
 </html>
