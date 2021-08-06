@@ -62,6 +62,9 @@ axios.get(apiUrl).then(displayTemperature);
 
 apiUrl = `https://api.openweathermap.org/data/2.5/forecast?q=${city}&appid=${apiKey}&units=metric`;
 axios.get(apiUrl).then(displayForecast);
+
+apiUrl = `https://api.openweathermap.org/data/2.5/forecast?q=${city}&appid=${apiKey}&units=metric`;
+axios.get(apiUrl).then(displayMobile);
 }
 
 function displayForecast(response) {
@@ -69,7 +72,7 @@ function displayForecast(response) {
     forecastElement.innerHTML = null;
     let forecast = null;
     
-    for (let index = 0; index < 5; index++){
+    for (let index = 0; index < 6; index++){
         forecast = response.data.list[index];
         forecastElement.innerHTML+=`
     <div class="col">
@@ -86,6 +89,32 @@ function displayForecast(response) {
              </div>
          </div>`
     } 
+
+}
+
+function displayMobile(response) {
+    let forecastElement = document.querySelector("#forecast-mobile");
+    forecastElement.innerHTML = null;
+    let forecast = null;
+    
+    for (let index = 0; index < 3; index++){
+        forecast = response.data.list[index];
+        forecastElement.innerHTML+=`
+    <div class="col">
+             <div class=card-day id="day-1">
+                 <div class="card-body">
+                     <h4>
+                         ${formatHours(forecast.dt * 1000)}
+                     </h4>
+                     <img src="http://openweathermap.org/img/wn/${forecast.weather[0].icon}@2x.png">
+                     <div class="forecast-temp"> 
+                        ${Math.round(forecast.main.temp)}°
+                     </div>
+                 </div>
+             </div>
+         </div>`
+    } 
+
 }
 
 function handleSubmit(event) {
